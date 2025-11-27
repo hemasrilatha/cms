@@ -30,6 +30,7 @@ jobs:
           file: ./CMS-Backend/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-backend:latest
+          no-cache: true
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -38,3 +39,4 @@ jobs:
           file: ./CMS-Frontend/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/docker-frontend:latest
+          no-cache: true
