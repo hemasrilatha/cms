@@ -29,7 +29,7 @@ jobs:
           context: ./CMS-Backend
           file: ./CMS-Backend/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/docker-backend1:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/docker-backend2:latest
           no-cache: true
 
       - name: Build and push frontend image
@@ -38,5 +38,5 @@ jobs:
           context: ./CMS-Frontend
           file: ./CMS-Frontend/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/docker-frontend1:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/docker-frontend2:latest
           no-cache: true
